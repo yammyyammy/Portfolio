@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="vue.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Notable" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
@@ -49,22 +50,13 @@
         <p class="section__products__inner__title">PRODUCTS</p>
         <div class="section__products__inner__products-cards">
           <div class="container-fluid">
-            <div class="row">
-              <div class="col">
+            <div class="row" id="test">
+              <div v-for="card in cards" class="col col-md-3">
                 <div class="card">
-                 <img class="card-img-top" src="image__top.PNG" alt="Card image cap">
+                 <img class="card-img-top" :src="card.image" :alt="card.alt">
                   <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                 <img class="card-img-top" src="image__top.PNG" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.text }}</p>
                   </div>
                 </div>
               </div>
@@ -90,3 +82,25 @@
     </section>
   </body>
 </html>
+
+<script>
+  // PRODUCTS card
+  var test = new Vue({
+  el: '#test',
+  data: {
+    cards: [
+      { 
+        title: 'Special title treatment 1',
+        text: 'With supporting text below as a natural lead-in to additional content.(1)',
+        image: 'image__top.PNG',
+        alt: 'Card image cap'
+       },
+      { 
+        title: 'Special title treatment 2',
+        text: 'With supporting text below as a natural lead-in to additional content.(2)',
+        image: 'image__top.PNG'
+       }
+    ]
+  }
+})
+</script>
