@@ -9,7 +9,27 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <nav></nav>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style='background-color: rgba(219, 127, 136, 0.3);'>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="ナビゲーションの切替">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Yammy <span class="sr-only">(現位置)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/yammy_yammy3">Twitter</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
     <!-- TOP -->
     <section class="section__top">
       <div class="section__top__inner">
@@ -31,21 +51,31 @@
       </div>
     </section>
     <!-- SKILLS -->
-    <section class="section-container section__skills">
+    <section class="section-container section__skills" id="skills">
       <div class="section__skills__inner">
         <p class="section__skills__inner__title">SKILLS</p>
-        <div class="section__skills__inner__code-area">
-          <p class="section__skills__inner__code-area__code">
-            texttexttexttexttexttexttexttexttext<br/>texttexttexttexttexttexttexttexttexttext<br/>
-            texttexttexttexttexttexttexttexttext<br/>texttexttexttexttexttexttexttexttexttext<br/>
-            texttexttexttexttexttexttexttexttext<br/>texttexttexttexttexttexttexttexttexttext<br/>
-            texttexttexttexttexttexttexttexttext<br/>texttexttexttexttexttexttexttexttexttext<br/>
-          </p>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#tab1" class="nav-link active" data-toggle="tab">タブ1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tab2" class="nav-link" data-toggle="tab">タブ1</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_html">
+                    <p>{{ codes.html }}</p>
+                 </div>
+                 <div class="tab-pane" id="tab2">
+                    Hellooooo
+                 </div>
+            </div>
         </div>
       </div>
     </section>
     <!-- PRODUCTS -->
-    <section>
+    <section id="products">
       <div class="container-fluid section__products__inner">
         <p class="section__products__inner__title">PRODUCTS</p>
         <div class="section__products__inner__products-cards">
@@ -103,4 +133,9 @@
     ]
   }
 })
+
 </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

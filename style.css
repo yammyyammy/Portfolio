@@ -12,7 +12,7 @@
   height: 500px;
   padding-top: 50px;
   padding-bottom: 50px;
-  background: rgb(219, 127, 136);
+  background: #db7f88;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,6 +71,7 @@
 
 .section__skills__inner {
   position: relative;
+  padding-top: 5rem;
 }
 
 .section__skills__inner__title {
@@ -79,11 +80,6 @@
   font-family: 'Notable', sans-serif;
   font-size: 4rem;
   color: rgb(219, 127, 136);
-}
-
-.section__skills__inner__code-area {
-  position: absolute;
-  top: 50px;
 }
 
 .section__skills__inner__code-area__code {
